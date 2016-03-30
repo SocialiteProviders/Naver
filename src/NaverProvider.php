@@ -2,12 +2,17 @@
 
 namespace SocialiteProviders\Naver;
 
-use Laravel\Socialite\Two\AbstractProvider;
 use Laravel\Socialite\Two\ProviderInterface;
-use Laravel\Socialite\Two\User;
+use SocialiteProviders\Manager\OAuth2\AbstractProvider;
+use SocialiteProviders\Manager\OAuth2\User;
 
 class NaverProvider extends AbstractProvider implements ProviderInterface
 {
+    /**
+     * Unique Provider Identifier.
+     */
+    const IDENTIFIER = 'NAVER';
+
     /**
      * Get the authentication URL for the provider.
      *
