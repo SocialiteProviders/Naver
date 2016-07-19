@@ -94,8 +94,9 @@ class NaverProvider extends AbstractProvider implements ProviderInterface
     protected function mapUserToObject(array $user)
     {
         return (new User())->setRaw($user)->map([
-            'id' => $user['id'], 'nickname' => $user['nickname'],
-            'name' => $user['name'], 'email' => $user['email'],
+            'id' => $user['id'],
+            'nickname' => $user['nickname'],
+            'email' => $user['email'],
             'avatar' => $user['profile_image'],
         ]);
     }
