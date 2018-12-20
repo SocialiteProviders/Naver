@@ -95,8 +95,8 @@ class NaverProvider extends AbstractProvider implements ProviderInterface
     {
         return (new User())->setRaw($user)->map([
             'id'       => $user['id'],
-            'nickname' => $user['nickname'],
-            'email'    => $user['email'],
+            'nickname' => isset($user['nickname']) ? $user['nickname'] : null,
+            'email'    => isset($user['email']) ? $user['email'] : null,
             'avatar'   => $user['profile_image'],
         ]);
     }
